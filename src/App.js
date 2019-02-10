@@ -1,26 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import Login from './pages/Login';
+import Timeline from './pages/Timeline';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      // BrowserRouter: o caminho da URL
+      // Switch: garante que apenas uma rota seja chamada
+      // cada vez que o usuário estiver em um endereço diferente
+      // Route: indica cada rota da aplicação
+      // Exact: garante que a rota tem que ser realmente aquela da URL,
+      // inclui somente na rota raiz
+      <BrowserRouter> 
+        <Switch>
+          <Route path='/' exact component={Login} />
+          <Route path='/timeline' component={Timeline} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
