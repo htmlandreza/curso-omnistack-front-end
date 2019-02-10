@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-// import { Container } from './styles';
+import './Timeline.css'
 
 export default class Timeline extends Component {
   render() {
