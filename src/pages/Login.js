@@ -10,15 +10,31 @@ export default class Login extends Component {
         username: '',
     };
 
-    handleInputChange = () => {
-        this.setState({ }); // username
-    }
+    handleSubmit = e => {
+        // o form costuma redirecionar pra outra página
+        // preventDefault: vai evitar o comportamento padrão do form
+        e.preventDefault();
+
+        const { username } = this.state;
+
+        if (!username.length) return;
+
+        // armazenamento
+        localStorage.setItem('@GoTwitter:username', username);
+        
+        // acessar propriedades e redireciona
+        this.props.history.push('/timeline');
+    };
+
+    handleInputChange = e => {
+        this.setState({ username: e.target.value });
+    };
 
     render() {
         return (
             <div className="login-wrapper">
                 <img src={twitterLogo} alt="GoTwitter"/>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     {/* 
                         onChange: um evento js. toda vez que ele
                         sofre uma alteração de texto, uma função
