@@ -1,0 +1,34 @@
+[
+  {
+    "content": "Tempo real funcionando!",
+    "author": "Andreza"
+  },
+  {
+    "content": "Novo tweet pelo ReactJS em tempo real.",
+    "author": "Andreza"
+  },
+  {
+    "author": "Andreza Moreira",
+    "content": "Novo tweet em tempo real."
+  },
+  {
+    "author": "Andreza Moreira",
+    "content": "Testando tempo real com o tweet."
+  },
+  {
+    "content": "Meu primeiro tweet com ReactJS",
+    "author": "Andreza"
+  },
+  {
+    "author": "Andreza Moreira",
+    "content": "Terceiro tweet."
+  },
+  {
+    "author": "Andreza Moreira",
+    "content": "Segundo tweet."
+  },
+  {
+    "author": "Andreza Moreira",
+    "content": "Primeiro tweet."
+  }
+]
